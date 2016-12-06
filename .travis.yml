@@ -15,3 +15,5 @@ android:
   - extra-android-m2repository
 script:
 - "./gradlew assembleRelease"
+before_install:
+- chmod +x gradlew

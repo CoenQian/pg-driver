@@ -7,6 +7,7 @@ package com.fcbox.pangu.driver;
 /**
  * 日志接口，丰巢实现该接口.
  */
+@SuppressWarnings("ALL")
 public interface ILogger {
 
     /**

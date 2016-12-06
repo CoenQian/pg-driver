@@ -7,6 +7,7 @@ package com.fcbox.pangu.driver;
 /**
  * Console工厂, 供应商需要实现该接口.
  */
+@SuppressWarnings("ALL")
 public interface IConsoleFactory {
 
     /**

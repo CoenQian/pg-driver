@@ -7,6 +7,7 @@ package com.fcbox.pangu.driver;
 /**
  * 版本信息.
  */
+@SuppressWarnings("ALL")
 public class Version {
 
     /** 版本号. */

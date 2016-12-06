@@ -7,6 +7,7 @@ package com.fcbox.pangu.driver;
 /**
  * 驱动异常.
  */
+@SuppressWarnings("ALL")
 public class DriverException extends Exception {
 
     /** 错误码. */

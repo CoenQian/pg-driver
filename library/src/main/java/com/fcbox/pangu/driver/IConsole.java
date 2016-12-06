@@ -9,6 +9,7 @@ import rx.Observable;
 /**
  * 控制台接口, 供应商需要实现该接口.
  */
+@SuppressWarnings("ALL")
 public interface IConsole {
 
     /**

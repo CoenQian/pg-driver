@@ -1,0 +1,23 @@
+ext {
+// Android Config
+// --------------------------------------------------------------------------------
+    compileSdkVersion = 24 // SDK编译版本
+    buildToolsVersion = '25.0.1' // 构建工具版本
+    minSdkVersion = 14 // 最小SDK版本
+    targetSdkVersion = 24 // 目标SDK版本
+
+    versionCode = 1
+    versionName = '0.1.0'
+
+// Libraries
+// --------------------------------------------------------------------------------
+    supportVersion = '24.2.1'
+    rxJavaVersion = '1.2.3'
+
+// Modules
+// --------------------------------------------------------------------------------
+    libraryModule = [
+            supportAnnotation: "com.android.support:support-annotations:${supportVersion}",
+            rxJava           : "io.reactivex:rxjava:${rxJavaVersion}"
+    ]
+}

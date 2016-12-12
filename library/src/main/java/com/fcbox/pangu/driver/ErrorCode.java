@@ -20,6 +20,7 @@ import static com.fcbox.pangu.driver.ErrorCode.TIMEOUT;
  */
 @IntDef({ERROR, PARAM_MISSING, PARAM_INVALID, HARDWARE_NO_RESPONSE, TIMEOUT})
 @Retention(RetentionPolicy.SOURCE)
+@SuppressWarnings("ALL")
 public @interface ErrorCode {
 // 通用 [0, 1000)
 // --------------------------------------------------------------------------------

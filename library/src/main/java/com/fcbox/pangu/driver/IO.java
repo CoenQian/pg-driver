@@ -17,6 +17,7 @@ import static com.fcbox.pangu.driver.IO.ON;
  */
 @IntDef({OFF, ON})
 @Retention(RetentionPolicy.SOURCE)
+@SuppressWarnings("ALL")
 public @interface IO {
     /** 关. */
     int OFF = 0;

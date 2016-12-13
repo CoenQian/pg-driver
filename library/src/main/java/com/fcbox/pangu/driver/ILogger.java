@@ -12,7 +12,6 @@ import android.support.annotation.NonNull;
 @SuppressWarnings("ALL")
 public interface ILogger {
 
-
     /**
      * Debug日志.
      *

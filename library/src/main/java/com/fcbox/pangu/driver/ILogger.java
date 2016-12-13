@@ -4,30 +4,41 @@
 
 package com.fcbox.pangu.driver;
 
+import android.support.annotation.NonNull;
+
 /**
  * 日志接口，丰巢实现该接口.
  */
 @SuppressWarnings("ALL")
 public interface ILogger {
 
-    /**
-     * 打印调试日志.
-     *
-     * @param message 日志内容
-     */
-    void d(String message);
 
     /**
-     * 打印普通日志.
+     * Debug日志.
      *
      * @param message 日志内容
      */
-    void i(String message);
+    void d(@NonNull String message);
 
     /**
-     * 打印异常日志.
+     * Info日志.
      *
      * @param message 日志内容
      */
-    void e(String message);
+    void i(@NonNull String message);
+
+    /**
+     * Error日志.
+     *
+     * @param message 日志内容
+     */
+    void e(@NonNull String message);
+
+    /**
+     * Error日志.
+     *
+     * @param message   日志内容
+     * @param throwable 异常
+     */
+    void e(@NonNull String message, @NonNull Throwable throwable);
 }

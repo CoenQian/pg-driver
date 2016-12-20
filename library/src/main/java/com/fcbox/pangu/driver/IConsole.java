@@ -4,6 +4,8 @@
 
 package com.fcbox.pangu.driver;
 
+import java.util.List;
+
 import rx.Observable;
 
 /**
@@ -24,14 +26,14 @@ public interface IConsole {
      *
      * @return 单柜编码列表
      */
-    Observable<String[]> readPortionCodes();
+    Observable<List<String>> readPortionCodes();
 
     /**
      * 激活柜机.
      *
      * @param portionCodes 单柜编码列表
      */
-    Observable<Void> activateLocker(String[] portionCodes);
+    Observable<Void> activateLocker(List<String> portionCodes);
 
     /**
      * 获取柜机外部的温度数值.
@@ -61,7 +63,7 @@ public interface IConsole {
      * @param cellCodes 格口编码列表
      * @return 格口的开关状态列表，true - 开启状态，false - 关闭状态
      */
-    Observable<Boolean[]> openCells(String[] cellCodes);
+    Observable<List<Boolean>> openCells(List<String> cellCodes);
 
     /**
      * 读取格口的开关状态.
@@ -69,15 +71,16 @@ public interface IConsole {
      * @param cellCodes 格口编码列表
      * @return 格口的开关状态列表，true - 开启状态，false - 关闭状态
      */
-    Observable<Boolean[]> readCellStatuses(String[] cellCodes);
+    Observable<List<Boolean>> readCellStatuses(List<String> cellCodes);
 
+    /**
     /**
      * 格口红外检测.
      *
      * @param cellCodes 格口编码列表
      * @return 格口的储物状态列表，true - 占用状态，false - 空闲状态
      */
-    Observable<Boolean[]> cellsInfraredDetection(String[] cellCodes);
+    Observable<List<Boolean>> cellsInfraredDetection(List<String> cellCodes);
 
     /**
      * 格口快照.
@@ -86,7 +89,7 @@ public interface IConsole {
      * @param cellCodes 格口编码列表
      * @return 快照的路径列表
      */
-    Observable<String[]> cellsSnapshot(String dirPath, String[] cellCodes);
+    Observable<List<String>> cellsSnapshot(String dirPath, List<String> cellCodes);
 
     /**
      * 开启RFID的识别.

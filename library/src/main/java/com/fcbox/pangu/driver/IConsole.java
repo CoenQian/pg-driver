@@ -74,7 +74,7 @@ public interface IConsole {
     Observable<List<Boolean>> readCellStatuses(List<String> cellCodes);
 
     /**
-    /**
+     * /**
      * 格口红外检测.
      *
      * @param cellCodes 格口编码列表
@@ -113,5 +113,12 @@ public interface IConsole {
      * @param io 开/关
      */
     Observable<Void> light(@IO int io);
+
+    /**
+     * 静默安装指定路径的apk.
+     *
+     * @param apkPath apk的路径
+     */
+    Observable<Void> installApk(String apkPath);
 }
 

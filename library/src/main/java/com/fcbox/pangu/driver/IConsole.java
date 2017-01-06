@@ -115,10 +115,13 @@ public interface IConsole {
     Observable<Void> light(@IO int io);
 
     /**
-     * 静默安装指定路径的apk.
+     * 静默安装指定路径的apk，安装时前台界面显示升级提示页面，安装完成后关闭升级提示页面，
+     * 根据传递的包名和类名检测组件是activity还是service来启动对应的组件，包名和类名为空时不做任何操作.
      *
      * @param apkPath apk的路径
+     * @param pkgName 全限定包名
+     * @param clsName 全限定类名
      */
-    Observable<Void> installApk(String apkPath);
+    Observable<Void> installApk(String apkPath, String pkgName, String clsName);
 }
 

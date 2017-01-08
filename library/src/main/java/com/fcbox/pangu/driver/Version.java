@@ -4,6 +4,8 @@
 
 package com.fcbox.pangu.driver;
 
+import android.support.annotation.NonNull;
+
 /**
  * 版本信息.
  */
@@ -13,9 +15,10 @@ public class Version {
     /** 版本号. */
     private final int mVerCode;
     /** 版本名. */
+    @NonNull
     private final String mVerName;
 
-    public Version(int verCode, String verName) {
+    public Version(int verCode, @NonNull String verName) {
         this.mVerCode = verCode;
         this.mVerName = verName;
     }
@@ -34,6 +37,7 @@ public class Version {
      *
      * @return 当前版本名
      */
+    @NonNull
     public String getVerName() {
         return mVerName;
     }

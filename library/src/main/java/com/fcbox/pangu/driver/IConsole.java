@@ -4,6 +4,9 @@
 
 package com.fcbox.pangu.driver;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
 import java.util.List;
 
 import rx.Observable;
@@ -33,7 +36,7 @@ public interface IConsole {
      *
      * @param portionCodes 单柜编码列表
      */
-    Observable<Void> activateLocker(List<String> portionCodes);
+    Observable<Void> activateLocker(@NonNull List<String> portionCodes);
 
     /**
      * 获取柜机外部的温度数值.
@@ -55,7 +58,7 @@ public interface IConsole {
      * @param cellCode 格口编码
      * @return 格口的开关状态，true - 开启状态，false - 关闭状态
      */
-    Observable<Boolean> openCell(String cellCode);
+    Observable<Boolean> openCell(@NonNull String cellCode);
 
     /**
      * 批量打开格口.
@@ -63,7 +66,7 @@ public interface IConsole {
      * @param cellCodes 格口编码列表
      * @return 格口的开关状态列表，true - 开启状态，false - 关闭状态
      */
-    Observable<List<Boolean>> openCells(List<String> cellCodes);
+    Observable<List<Boolean>> openCells(@NonNull List<String> cellCodes);
 
     /**
      * 读取格口的开关状态.
@@ -71,7 +74,7 @@ public interface IConsole {
      * @param cellCodes 格口编码列表
      * @return 格口的开关状态列表，true - 开启状态，false - 关闭状态
      */
-    Observable<List<Boolean>> readCellStatuses(List<String> cellCodes);
+    Observable<List<Boolean>> readCellStatuses(@NonNull List<String> cellCodes);
 
     /**
      * /**
@@ -80,7 +83,7 @@ public interface IConsole {
      * @param cellCodes 格口编码列表
      * @return 格口的储物状态列表，true - 占用状态，false - 空闲状态
      */
-    Observable<List<Boolean>> cellsInfraredDetection(List<String> cellCodes);
+    Observable<List<Boolean>> cellsInfraredDetection(@NonNull List<String> cellCodes);
 
     /**
      * 格口快照.
@@ -89,7 +92,7 @@ public interface IConsole {
      * @param cellCodes 格口编码列表
      * @return 快照的路径列表
      */
-    Observable<List<String>> cellsSnapshot(String dirPath, List<String> cellCodes);
+    Observable<List<String>> cellsSnapshot(@NonNull String dirPath, @NonNull List<String> cellCodes);
 
     /**
      * 开启RFID的识别.
@@ -122,6 +125,6 @@ public interface IConsole {
      * @param pkgName 全限定包名
      * @param clsName 全限定类名
      */
-    Observable<Void> installApk(String apkPath, String pkgName, String clsName);
+    Observable<Void> installApk(@NonNull String apkPath, @Nullable String pkgName, @Nullable String clsName);
 }
 

@@ -4,6 +4,8 @@
 
 package com.fcbox.pangu.driver;
 
+import android.support.annotation.NonNull;
+
 /**
  * 驱动异常.
  */
@@ -14,9 +16,10 @@ public class DriverException extends Exception {
     @ErrorCode
     private int mErrorCode;
     /** 错误描述. */
+    @NonNull
     private String mErrorMessage;
 
-    public DriverException(@ErrorCode int errorCode, String errorMessage) {
+    public DriverException(@ErrorCode int errorCode, @NonNull String errorMessage) {
         super(errorMessage);
         mErrorCode = errorCode;
         mErrorMessage = errorMessage;
@@ -31,11 +34,12 @@ public class DriverException extends Exception {
         this.mErrorCode = mErrorCode;
     }
 
+    @NonNull
     public String getErrorMessage() {
         return mErrorMessage;
     }
 
-    public void setErrorMessage(String mErrorMessage) {
+    public void setErrorMessage(@NonNull String mErrorMessage) {
         this.mErrorMessage = mErrorMessage;
     }
 }

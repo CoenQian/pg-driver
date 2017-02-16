@@ -103,12 +103,22 @@ public interface IConsole {
     Observable<String> startRfid(long duration);
 
     /**
-     * 开启扫描仪的识别功能.
+     * 关闭RFID的识别.
+     */
+    Observable<Void> stopRfid();
+
+    /**
+     * 开启条码扫描器的识别.
      *
      * @param duration 持续时间
      * @return 扫描到的数据
      */
     Observable<String> startScanner(long duration);
+
+    /**
+     * 关闭条码扫描器的识别.
+     */
+    Observable<Void> stopScanner();
 
     /**
      * 控制灯箱开关.

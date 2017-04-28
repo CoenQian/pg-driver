@@ -1,7 +1,7 @@
 # pg-driver
 
-[![License](https://img.shields.io/badge/Liense-HiveBox-brightgreen.svg)](https://github.com/JiongBull/pg-driver/blob/master/LICENSE.md)
+[![License](https://img.shields.io/badge/license-hivebox-brightgreen.svg)](https://github.com/JiongBull/pg-driver/blob/master/LICENSE.md)
 [![Download](https://jitpack.io/v/JiongBull/pg-driver.svg)](https://jitpack.io/#JiongBull/pg-driver)
 [![Build Status](https://travis-ci.org/JiongBull/pg-driver.svg?branch=master)](https://travis-ci.org/JiongBull/pg-driver)
 
-pg-driver是硬件的驱动接口。
+pg-driver 是硬件的驱动接口。
